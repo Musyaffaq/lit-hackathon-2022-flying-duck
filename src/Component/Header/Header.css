@@ -1,0 +1,27 @@
+.container {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  background-color: rgb(50, 141, 168);
+}
+
+.heading-left {
+  display: flex;
+  justify-content: space-between;
+  width: 22rem;
+}
+
+.logo {
+  padding-top: 1rem;
+  padding-left: 7rem;
+}
+
+.nav {
+  padding-top: 0.7rem;
+  padding-right: 8rem;
+}
+
+.name:hover {
+  cursor: pointer;
+}

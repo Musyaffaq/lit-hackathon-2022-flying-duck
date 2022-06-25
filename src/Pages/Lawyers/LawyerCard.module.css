@@ -1,0 +1,12 @@
+.img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-betweens;
+}
+
+.details {
+  flex-direction: row;
+  justify-content: space-between;
+  display: fixed;
+  margin-left: 50px;
+}

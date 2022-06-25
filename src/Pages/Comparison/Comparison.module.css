@@ -1,0 +1,17 @@
+.header {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.chip {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.table {
+}
+
+.footer {
+  padding-top: 10rem;
+}
