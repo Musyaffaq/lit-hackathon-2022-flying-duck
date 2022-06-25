@@ -7,6 +7,8 @@ import Comparison from "./Pages/Comparison/Comparison";
 import Lawyers from "./Pages/Lawyers/Lawyers";
 import Header from "./Component/Header/Header";
 
+import KommunicateChat from "./chat";
+
 function App() {
   return (
     <>
@@ -20,6 +22,7 @@ function App() {
               <Route path="/lawyers" component={Lawyers} />
             </Switch>
           </Container>
+          <KommunicateChat />
         </div>
       </BrowserRouter>
     </>
