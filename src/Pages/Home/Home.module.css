@@ -1,7 +1,13 @@
 .container {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   max-width: 40rem;
   margin: 0 auto;
-  padding-top: 5rem;
+  padding-top: clamp(0.5rem, 2.5vw, 5rem);
   font-family: "Montserrat", sans-serif;
   font-style: oblique;
+}
+
+#barsImg {
+  padding-top: 2rem;
+  width: clamp(100px, 70vw, 300px);
 }

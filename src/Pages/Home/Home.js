@@ -3,6 +3,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { setNavValue } from "../../redux/navTabSlice";
 import classes from "./Home.module.css";
+import id from "./Home.module.css";
+import imgUrl from "../../assets/img/charts-pie-and-bars.svg"
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -19,6 +21,10 @@ export default function Home() {
         <Button onClick={onClickHandler} variant="contained">
           Compare Law
         </Button>
+        <br/>
+        <div style={{ 'justifyContent': 'center', 'display': 'flex'}}>
+          <img id={id.barsImg} src={imgUrl} />
+        </div>
       </Container>
     </div>
   );
