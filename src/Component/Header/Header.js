@@ -19,7 +19,7 @@ export default function Header() {
           <GavelIcon fontSize="large" />
         </span>
         <h2 onClick={onClickHandler} className="name">
-          WEBSITE NAME
+          Flying-ducks
         </h2>
       </div>
       <div className="nav">

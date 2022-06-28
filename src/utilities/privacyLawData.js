@@ -13,8 +13,8 @@ export const privacyLawData = [
       country: "Malaysia",
       info: "Unlike other jurisdictions, Malaysia has no specific law such as a Privacy Act to protect personal privacy, except for the Personal Data Protection Act 2010 (“PDPA”), which deals with personal data and focuses on regulating the processing of ‘personal data’ in commercial transactions.",
     },
-    thailand: {
-      country: "Thailand",
+    philippines: {
+      country: "Philippines",
       info: "Thailand’s first-ever law on personal data protection will come into force on June 1, 2022, after being postponed since 2019. The law outlines the obligations for businesses regarding the collection and processing of personal information. ",
     },
     cambodia: {
@@ -40,8 +40,8 @@ export const privacyLawData = [
       country: "Malaysia",
       info: "Unlike other jurisdictions, Malaysia has no specific law such as a Privacy Act to protect personal privacy, except for the Personal Data Protection Act 2010 (“PDPA”), which deals with personal data and focuses on regulating the processing of ‘personal data’ in commercial transactions.",
     },
-    thailand: {
-      country: "Thailand",
+    philippines: {
+      country: "Philippines",
       info: "Thailand’s first-ever law on personal data protection will come into force on June 1, 2022, after being postponed since 2019. The law outlines the obligations for businesses regarding the collection and processing of personal information. ",
     },
     cambodia: {
@@ -66,8 +66,8 @@ export const privacyLawData = [
       country: "Malaysia",
       info: "Unlike other jurisdictions, Malaysia has no specific law such as a Privacy Act to protect personal privacy, except for the Personal Data Protection Act 2010 (“PDPA”), which deals with personal data and focuses on regulating the processing of ‘personal data’ in commercial transactions.",
     },
-    thailand: {
-      country: "Thailand",
+    philippines: {
+      country: "Philippines",
       info: "Thailand’s first-ever law on personal data protection will come into force on June 1, 2022, after being postponed since 2019. The law outlines the obligations for businesses regarding the collection and processing of personal information. ",
     },
     cambodia: {
@@ -92,8 +92,8 @@ export const privacyLawData = [
       country: "Malaysia",
       info: "Unlike other jurisdictions, Malaysia has no specific law such as a Privacy Act to protect personal privacy, except for the Personal Data Protection Act 2010 (“PDPA”), which deals with personal data and focuses on regulating the processing of ‘personal data’ in commercial transactions.",
     },
-    thailand: {
-      country: "Thailand",
+    philippines: {
+      country: "Philippines",
       info: "Thailand’s first-ever law on personal data protection will come into force on June 1, 2022, after being postponed since 2019. The law outlines the obligations for businesses regarding the collection and processing of personal information. ",
     },
     cambodia: {

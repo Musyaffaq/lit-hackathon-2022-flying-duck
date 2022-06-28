@@ -1,5 +1,6 @@
 import classes from "./ComparisonTable.module.css";
 import * as React from "react";
+import { useSelector } from "react-redux";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -8,6 +9,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function ComparisonTable(props) {
   const [expanded, setExpanded] = React.useState(false);
+
+  const { singaporeSelected } = useSelector((state) => state.selectSingapore);
+  const { malaysiaSelected } = useSelector((state) => state.selectMalaysia);
+  const { philippinesSelected } = useSelector(
+    (state) => state.selectPhilippines
+  );
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -35,36 +42,58 @@ export default function ComparisonTable(props) {
           <Typography>
             <span>{props.summary}</span>
           </Typography>
-          <Typography className={classes.country}>
-            {props.singapore.country}
-          </Typography>
-          <Typography>
-            <span>{props.singapore.info}</span>
-          </Typography>
-          <Typography className={classes.country}>
-            {props.malaysia.country}
-          </Typography>
-          <Typography>
-            <span>{props.malaysia.info}</span>
-          </Typography>
-          <Typography className={classes.country}>
-            {props.thailand.country}
-          </Typography>
-          <Typography>
-            <span>{props.thailand.info}</span>
-          </Typography>
-          <Typography className={classes.country}>
-            {props.cambodia.country}
-          </Typography>
-          <Typography>
-            <span>{props.cambodia.info}</span>
-          </Typography>
-          <Typography className={classes.country}>
-            {props.indonesia.country}
-          </Typography>
-          <Typography>
-            <span>{props.indonesia.info}</span>
-          </Typography>
+          {singaporeSelected && (
+            <>
+              <Typography
+                className={classes.country}
+                style={{
+                  fontWeight: "bold",
+                  padding: "2rem",
+                  textDecoration: "underline",
+                }}
+              >
+                {props.singapore.country}
+              </Typography>
+              <Typography>
+                <span>{props.singapore.info}</span>
+              </Typography>
+            </>
+          )}
+
+          {malaysiaSelected && (
+            <>
+              <Typography
+                className={classes.country}
+                style={{
+                  fontWeight: "bold",
+                  padding: "2rem",
+                  textDecoration: "underline",
+                }}
+              >
+                {props.malaysia.country}
+              </Typography>
+              <Typography>
+                <span>{props.malaysia.info}</span>
+              </Typography>
+            </>
+          )}
+          {philippinesSelected && (
+            <>
+              <Typography
+                className={classes.country}
+                style={{
+                  fontWeight: "bold",
+                  padding: "2rem",
+                  textDecoration: "underline",
+                }}
+              >
+                {props.philippines.country}
+              </Typography>
+              <Typography>
+                <span>{props.philippines.info}</span>
+              </Typography>
+            </>
+          )}
         </AccordionDetails>
       </Accordion>
     </div>

@@ -1,12 +1,19 @@
-.header {
-  text-align: center;
-  padding-bottom: 1rem;
+.container {
+  min-height: 100vh;
 }
 
 .chip {
   width: 50%;
   margin: 0 auto;
   padding-bottom: 2rem;
+}
+
+.no-results {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 }
 
 .table {

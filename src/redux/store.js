@@ -2,17 +2,15 @@ import { configureStore } from "@reduxjs/toolkit";
 import navTabReducer from "./navTabSlice";
 import selectSingapore from "./countrySlice/Singapore/selectSingapore";
 import selectMalaysia from "./countrySlice/Malaysia/selectMalaysia";
-import selectThailand from "./countrySlice/Thailand/selectThailand";
-import selectCambodia from "./countrySlice/Cambodia/selectCambodia";
-import selectIndonesia from "./countrySlice/Indonesia/selectIndonesia";
+import selectPhilippines from "./countrySlice/Philippines/selectPhilippines";
+import searchedReducer from "./searchedLawSlice";
 
 export const store = configureStore({
   reducer: {
     navTab: navTabReducer,
+    searched: searchedReducer,
     selectSingapore: selectSingapore,
     selectMalaysia: selectMalaysia,
-    selectThailand: selectThailand,
-    selectCambodia: selectCambodia,
-    selectIndonesia: selectIndonesia,
+    selectPhilippines: selectPhilippines,
   },
 });

@@ -3,7 +3,12 @@
   display: flex;
   width: 100vw;
   justify-content: space-between;
-  background-color: rgb(50, 141, 168);
+  background-color: rgb(50, 168, 102);
+  z-index: 88;
+}
+.name {
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 .heading-left {

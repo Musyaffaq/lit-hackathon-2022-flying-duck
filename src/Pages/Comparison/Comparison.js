@@ -7,15 +7,19 @@ import { setNavValue } from "../../redux/navTabSlice";
 import FaceIcon from "@mui/icons-material/Face";
 import ComparisonTable from "./ComparisonTable";
 import classes from "./Comparison.module.css";
+import SearchBar from "../../Component/SearchBar/SearchBar";
+import "../../App.css";
 
 import { privacyLawData } from "../../utilities/privacyLawData";
 
 export default function Compare() {
   const { singaporeSelected } = useSelector((state) => state.selectSingapore);
   const { malaysiaSelected } = useSelector((state) => state.selectMalaysia);
-  const { thailandSelected } = useSelector((state) => state.selectThailand);
-  const { cambodiaSelected } = useSelector((state) => state.selectCambodia);
-  const { indonesiaSelected } = useSelector((state) => state.selectIndonesia);
+  const { philippinesSelected } = useSelector(
+    (state) => state.selectPhilippines
+  );
+
+  const { searchValue, hasSearch } = useSelector((state) => state.searched);
 
   const dispatch = useDispatch();
 
@@ -23,16 +27,21 @@ export default function Compare() {
     dispatch(setNavValue(2));
   }
 
+  let lawDataToUse = privacyLawData;
+  if (searchValue) {
+    lawDataToUse = searchValue;
+  }
+
   return (
-    <Container>
-      <h3 className={classes.header}>
-        Please select the country you wish to compare
-      </h3>
+    <Container className={classes.container}>
+      <div>
+        <SearchBar />
+      </div>
       <div className={classes.chip}>
         <ChipComponent />
       </div>
       <div className={classes.table}>
-        {privacyLawData.map((data) => (
+        {lawDataToUse.map((data) => (
           <ComparisonTable
             key={data.id}
             id={data.id}
@@ -41,15 +50,16 @@ export default function Compare() {
             summary={data.summary}
             singapore={singaporeSelected ? data.singapore : ""}
             malaysia={malaysiaSelected ? data.malaysia : ""}
-            thailand={thailandSelected ? data.thailand : ""}
-            cambodia={cambodiaSelected ? data.cambodia : ""}
-            indonesia={indonesiaSelected ? data.indonesia : ""}
+            philippines={philippinesSelected ? data.philippines : ""}
           />
         ))}
+        {hasSearch && searchValue.length === 0 && (
+          <div className={classes["no-results"]}>Sorry, no results found..</div>
+        )}
       </div>
 
       <div className={classes.footer}>
-        <span>
+        <span className="font">
           Need futher help? Get in contact with
           <Chip
             icon={<FaceIcon />}

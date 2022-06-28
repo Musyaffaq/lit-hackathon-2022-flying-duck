@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setNavValue } from "../../redux/navTabSlice";
 import classes from "./Home.module.css";
 import id from "./Home.module.css";
-import imgUrl from "../../assets/img/charts-pie-and-bars.svg"
+import imgUrl from "../../assets/img/charts-pie-and-bars.svg";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -15,14 +15,17 @@ export default function Home() {
 
   return (
     <div className={classes.container}>
-      <Container>
+      <Container style={{ color: "" }}>
         <h3>Need help with Data privacy laws? Look no further!</h3>
         <p>Click on the button below to get started!</p>
-        <Button onClick={onClickHandler} variant="contained">
-          Compare Law
-        </Button>
-        <br/>
-        <div style={{ 'justifyContent': 'center', 'display': 'flex'}}>
+        <div className={classes.btn}>
+          <Button color="success" onClick={onClickHandler} variant="contained">
+            Compare Law
+          </Button>
+        </div>
+
+        <br />
+        <div style={{ justifyContent: "center", display: "flex" }}>
           <img id={id.barsImg} src={imgUrl} />
         </div>
       </Container>
