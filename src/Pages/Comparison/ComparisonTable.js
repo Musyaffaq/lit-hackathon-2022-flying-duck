@@ -31,16 +31,24 @@ export default function ComparisonTable(props) {
           expandIcon={<ExpandMoreIcon />}
           aria-controls={`panel${props.id}bh-content`}
           id={`panel${props.id}bh-header`}
-          sx={{ color: "primary.main" }}
+          sx={{
+            backgroundColor: "#06283D",
+            // borderBottom: "1px solid #12738E",
+            marginBottom: -1,
+            color: "#666666",
+            borderRadius: "30px 0px 30px 0",
+            minHeight: 56,
+            "&$expanded": {
+              minHeight: 56,
+            },
+          }}
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>
+          <Typography sx={{ width: "33%", flexShrink: 0, color: "white" }}>
             {props.code}
           </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-            {props.question}
-          </Typography>
+          <Typography sx={{ color: "white" }}>{props.question}</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{ backgroundColor: "#DFF6FF" }}>
           <Typography sx={{ fontWeight: "fontWeightLight" }}>
             <span>{props.summary}</span>
           </Typography>
