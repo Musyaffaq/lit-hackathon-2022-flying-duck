@@ -21,15 +21,17 @@ export default function ComparisonTable(props) {
   };
 
   return (
-    <div>
+    <>
       <Accordion
         expanded={expanded === `panel${props.id}`}
         onChange={handleChange(`panel${props.id}`)}
+        square={false}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={`panel${props.id}bh-content`}
           id={`panel${props.id}bh-header`}
+          sx={{ color: "primary.main" }}
         >
           <Typography sx={{ width: "33%", flexShrink: 0 }}>
             {props.code}
@@ -39,7 +41,7 @@ export default function ComparisonTable(props) {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography sx={{ fontWeight: "fontWeightLight" }}>
             <span>{props.summary}</span>
           </Typography>
           {singaporeSelected && (
@@ -96,6 +98,6 @@ export default function ComparisonTable(props) {
           )}
         </AccordionDetails>
       </Accordion>
-    </div>
+    </>
   );
 }

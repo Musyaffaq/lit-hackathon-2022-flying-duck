@@ -6,7 +6,7 @@ import classes from "./Lawyers.module.css";
 export default function Lawyers() {
   return (
     <div className={classes.div}>
-      <h2>Find Lawyers details </h2>
+      <h2 className={classes.title}>Find Lawyers details </h2>
       <div className={classes.container}>
         {lawyersData.map((data) => (
           <div key={data.firm} className={classes.card}>

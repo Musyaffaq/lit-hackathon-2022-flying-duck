@@ -17,12 +17,12 @@ function App() {
         <Header />
         <div
           className="app"
-          // style={{
-          //   backgroundImage: `url(${bgImg})`,
-          //   backgroundSize: "cover",
-          //   opacity: 0.8,
-          //   zIndex: 12,
-          // }}
+          style={{
+            backgroundImage: `url(${bgImg})`,
+            backgroundSize: "cover",
+            // opacity: 0.8,
+            zIndex: 12,
+          }}
         >
           <Container>
             <Switch>
