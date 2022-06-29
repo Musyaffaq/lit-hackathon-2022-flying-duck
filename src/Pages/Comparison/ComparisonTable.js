@@ -28,7 +28,7 @@ export default function ComparisonTable(props) {
         square={false}
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
           aria-controls={`panel${props.id}bh-content`}
           id={`panel${props.id}bh-header`}
           sx={{
