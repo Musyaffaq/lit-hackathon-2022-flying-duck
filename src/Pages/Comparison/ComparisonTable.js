@@ -83,7 +83,7 @@ export default function ComparisonTable(props) {
                   <AccordionDetails>
                     <Typography>
                       <span>
-                        {props.singapore.moreInfo}
+                        {props.singapore.subInfo}
                       </span>
                     </Typography>
                   </AccordionDetails>
@@ -116,7 +116,7 @@ export default function ComparisonTable(props) {
                   <AccordionDetails>
                     <Typography>
                       <span>
-                        {props.malaysia.moreInfo}
+                        {props.malaysia.subInfo}
                       </span>
                     </Typography>
                   </AccordionDetails>
@@ -148,7 +148,7 @@ export default function ComparisonTable(props) {
                   <AccordionDetails>
                     <Typography>
                       <span>
-                        {props.philippines.moreInfo}
+                        {props.philippines.subInfo}
                       </span>
                     </Typography>
                   </AccordionDetails>
