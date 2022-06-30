@@ -27,7 +27,7 @@ export default function ComparisonTable(props) {
 
   return (
     <>
-      <Accordion
+      <Accordion  
         expanded={expanded === `panel${props.id}`}
         onChange={handleChange(`panel${props.id}`)}
         square={false}
@@ -83,8 +83,7 @@ export default function ComparisonTable(props) {
                   <AccordionDetails>
                     <Typography>
                       <span>
-                        more details for singapore please
-                        {/* {props.singapore.info} */}
+                        {props.singapore.subInfo}
                       </span>
                     </Typography>
                   </AccordionDetails>
@@ -117,8 +116,7 @@ export default function ComparisonTable(props) {
                   <AccordionDetails>
                     <Typography>
                       <span>
-                        more details for singapore please
-                        {/* {props.singapore.info} */}
+                        {props.malaysia.subInfo}
                       </span>
                     </Typography>
                   </AccordionDetails>
@@ -150,8 +148,7 @@ export default function ComparisonTable(props) {
                   <AccordionDetails>
                     <Typography>
                       <span>
-                        more details for singapore please
-                        {/* {props.singapore.info} */}
+                        {props.philippines.subInfo}
                       </span>
                     </Typography>
                   </AccordionDetails>

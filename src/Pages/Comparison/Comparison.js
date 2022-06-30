@@ -35,7 +35,7 @@ export default function Compare() {
 
   //to split lawDataToUse into 2 lawDataObj under the category Consent or Purpose
 
-  const lawDataObjectConsent = lawDataToUse.map((data) => (
+  const lawDataObjectConsent = lawDataToUse.map((data) => ( data.category == 'consent'?
     <ComparisonTable
       key={data.id}
       id={data.id}
@@ -45,10 +45,10 @@ export default function Compare() {
       singapore={singaporeSelected ? data.singapore : ""}
       malaysia={malaysiaSelected ? data.malaysia : ""}
       philippines={philippinesSelected ? data.philippines : ""}
-    />
+    />:null
   ))
 
-  const lawDataObjectPurpose = lawDataToUse.map((data) => (
+  const lawDataObjectPurpose = lawDataToUse.map((data) => ( data.category == 'purpose' ?
     <ComparisonTable
       key={data.id}
       id={data.id}
@@ -58,7 +58,7 @@ export default function Compare() {
       singapore={singaporeSelected ? data.singapore : ""}
       malaysia={malaysiaSelected ? data.malaysia : ""}
       philippines={philippinesSelected ? data.philippines : ""}
-    />
+    />:null
   ))
 
 
