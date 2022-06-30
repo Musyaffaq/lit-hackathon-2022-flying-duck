@@ -6,19 +6,24 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Grid from "@mui/material/Grid";
 
 export default function ComparisonTable(props) {
   const [expanded, setExpanded] = React.useState(false);
-
+  const [expandedMoreInfo, setExpandedMoreInfo] = React.useState(false);
   const { singaporeSelected } = useSelector((state) => state.selectSingapore);
   const { malaysiaSelected } = useSelector((state) => state.selectMalaysia);
-  const { philippinesSelected } = useSelector(
-    (state) => state.selectPhilippines
-  );
+  const { philippinesSelected } = useSelector((state) => state.selectPhilippines);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const handleMoreInfoChange = (panel) => (event, isExpanded) => {
+    setExpandedMoreInfo(isExpanded ? panel : false);
+  };
+  
+  
 
   return (
     <>
@@ -43,7 +48,7 @@ export default function ComparisonTable(props) {
             },
           }}
         >
-          <Typography sx={{ width: "33%", flexShrink: 0, color: "white" }}>
+          <Typography sx={{ width: "33%", flesmhrink: 0, color: "white" }}>
             {props.code}
           </Typography>
           <Typography sx={{ color: "white" }}>{props.question}</Typography>
@@ -52,58 +57,108 @@ export default function ComparisonTable(props) {
           <Typography sx={{ fontWeight: "fontWeightLight" }}>
             <span>{props.summary}</span>
           </Typography>
+          <Grid container spacing={2}>
           {singaporeSelected && (
-            <>
-              <Typography
-                className={classes.country}
-                style={{
-                  fontWeight: "bold",
-                  padding: "2rem",
-                  textDecoration: "underline",
-                }}
-              >
-                {props.singapore.country}
-              </Typography>
-              <Typography>
-                <span>{props.singapore.info}</span>
-              </Typography>
-            </>
-          )}
+            <Grid item sm={12} md>
+                <Accordion
+                  expanded={expandedMoreInfo === `panelMoreInfo`}
+                  onChange={handleMoreInfoChange(`panelMoreInfo`)}
+                  sx={{display:'contents'}}
+                >
+                  <AccordionSummary>
+                  <Typography>
+                    <Typography
+                      className={classes.country}
+                      style={{
+                        fontWeight: "bold",
+                        padding: "2rem",
+                        textDecoration: "underline",
+                      }}
+                    >
+                    {props.singapore.country}
+                    </Typography>
+                    <span>{props.singapore.info}</span>
+                  </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <span>
+                        more details for singapore please
+                        {/* {props.singapore.info} */}
+                      </span>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
+            </Grid>
+          )}
           {malaysiaSelected && (
-            <>
-              <Typography
-                className={classes.country}
-                style={{
-                  fontWeight: "bold",
-                  padding: "2rem",
-                  textDecoration: "underline",
-                }}
-              >
-                {props.malaysia.country}
-              </Typography>
+            <Grid item sm={12} md>
+              <Accordion
+                  expanded={expandedMoreInfo === `panelMoreInfo`}
+                  onChange={handleMoreInfoChange(`panelMoreInfo`)}
+                  sx={{ display: 'contents' }}
+                >
+              <AccordionSummary>
               <Typography>
+                <Typography
+                  className={classes.country}
+                  style={{
+                    fontWeight: "bold",
+                    padding: "2rem",
+                    textDecoration: "underline",
+                  }}
+                >
+                  {props.malaysia.country}
+                </Typography>
                 <span>{props.malaysia.info}</span>
               </Typography>
-            </>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <span>
+                        more details for singapore please
+                        {/* {props.singapore.info} */}
+                      </span>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+            </Grid>
           )}
           {philippinesSelected && (
-            <>
-              <Typography
-                className={classes.country}
-                style={{
-                  fontWeight: "bold",
-                  padding: "2rem",
-                  textDecoration: "underline",
-                }}
-              >
-                {props.philippines.country}
-              </Typography>
-              <Typography>
-                <span>{props.philippines.info}</span>
-              </Typography>
-            </>
+            <Grid item sm={12} md>
+                <Accordion
+                  expanded={expandedMoreInfo === `panelMoreInfo`}
+                  onChange={handleMoreInfoChange(`panelMoreInfo`)}
+                  sx={{ display: 'contents' }}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      <Typography
+                        className={classes.country}
+                        style={{
+                          fontWeight: "bold",
+                          padding: "2rem",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        {props.philippines.country}
+                      </Typography>
+                      <span>{props.philippines.info}</span>
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <span>
+                        more details for singapore please
+                        {/* {props.singapore.info} */}
+                      </span>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+            </Grid>
           )}
+          </Grid>
         </AccordionDetails>
       </Accordion>
     </>
