@@ -58,7 +58,7 @@ export default function SearchBar() {
 
   const requestSearch = (searchValue) => {
     return privacyLawData.filter((data) => {
-      return data.code.toLowerCase().includes(searchValue.toLowerCase());
+      return data.question.toLowerCase().includes(searchValue.toLowerCase());
     });
   };
 
