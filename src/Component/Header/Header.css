@@ -20,6 +20,8 @@
 .logo {
   padding-top: 1rem;
   padding-left: 7rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .nav {
@@ -29,4 +31,15 @@
 
 .name:hover {
   cursor: pointer;
+}
+
+.logoGroup {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+h2 {
+  display: inline;
+  font-weight: bold;
 }

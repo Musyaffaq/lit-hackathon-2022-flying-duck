@@ -4,6 +4,7 @@ import GavelIcon from "@mui/icons-material/Gavel";
 import "./Header.css";
 import { useDispatch } from "react-redux";
 import { setNavValue } from "../../redux/navTabSlice";
+import privacyImage from "../../assets/img/privacy.png"
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -15,12 +16,10 @@ export default function Header() {
   return (
     <div className="container">
       <div className="heading-left">
-        <span className="logo">
-          <GavelIcon fontSize="large" />
+        <span className="logoGroup" onClick={onClickHandler}>
+          <img className="logo" src={privacyImage}/>
+          <h2 className="name">Privacy Law</h2>
         </span>
-        <h2 onClick={onClickHandler} className="name">
-          Flying-ducks
-        </h2>
       </div>
       <div className="nav">
         <NavTab />
