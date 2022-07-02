@@ -1,5 +1,6 @@
 import { Container } from "@mui/system";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import "./App.css";
 
 import Home from "./Pages/Home/Home";
@@ -13,6 +14,10 @@ import KommunicateChat from "./chat";
 function App() {
   return (
     <div>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Privacy Law</title>
+      </Helmet>
       <BrowserRouter>
         <Header />
         <div
