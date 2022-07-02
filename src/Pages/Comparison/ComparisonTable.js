@@ -86,6 +86,11 @@ export default function ComparisonTable(props) {
                         {props.singapore.subInfo}
                       </span>
                     </Typography>
+                    <Typography>
+                      <span style={{ fontStyle: 'italic' }}>
+                        {props.singapore.source}
+                      </span>
+                    </Typography>
                   </AccordionDetails>
                 </Accordion>
 
@@ -119,6 +124,11 @@ export default function ComparisonTable(props) {
                         {props.malaysia.subInfo}
                       </span>
                     </Typography>
+                    <Typography>
+                      <span style={{ fontStyle: 'italic' }}>
+                        {props.malaysia.source}
+                      </span>
+                    </Typography>
                   </AccordionDetails>
                 </Accordion>
             </Grid>
@@ -149,6 +159,11 @@ export default function ComparisonTable(props) {
                     <Typography>
                       <span style={{ whiteSpace: 'pre-line' }}>
                         {props.philippines.subInfo}
+                      </span>
+                    </Typography>
+                    <Typography>
+                      <span style={{ fontStyle: 'italic' }}>
+                        {props.philippines.source}
                       </span>
                     </Typography>
                   </AccordionDetails>
