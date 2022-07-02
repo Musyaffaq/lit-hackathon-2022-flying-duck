@@ -15,7 +15,7 @@ export const privacyLawData = [
     malaysia: {
       country: "Malaysia",
       info: "Yes",
-      subInfo: "6.1(a) The data user shall process personal data about an individual only if the individual has given his consent to the processing of personal data.",
+      subInfo: "6.-(1)(a) The data user shall process personal data about an individual only if the individual has given his consent to the processing of personal data.",
       source: "Personal Data Protection Act 2010 (Act 709)\n Version as of: 02 Jul 2022",
     },
     philippines: {
