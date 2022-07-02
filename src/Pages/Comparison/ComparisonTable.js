@@ -87,7 +87,7 @@ export default function ComparisonTable(props) {
                       </span>
                     </Typography>
                     <Typography>
-                      <span style={{ fontWeight: 'bold' }}>
+                      <span style={{ fontStyle: 'italic' }}>
                         {props.singapore.source}
                       </span>
                     </Typography>
@@ -125,7 +125,7 @@ export default function ComparisonTable(props) {
                       </span>
                     </Typography>
                     <Typography>
-                      <span style={{ fontWeight: 'bold' }}>
+                      <span style={{ fontStyle: 'italic' }}>
                         {props.malaysia.source}
                       </span>
                     </Typography>
@@ -162,7 +162,7 @@ export default function ComparisonTable(props) {
                       </span>
                     </Typography>
                     <Typography>
-                      <span style={{ fontWeight: 'bold' }}>
+                      <span style={{ fontStyle: 'italic' }}>
                         {props.philippines.source}
                       </span>
                     </Typography>
