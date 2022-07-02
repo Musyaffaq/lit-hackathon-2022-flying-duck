@@ -82,7 +82,7 @@ export default function ComparisonTable(props) {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      <span>
+                      <span style={{whiteSpace: 'pre-line'}}>
                         {props.singapore.subInfo}
                       </span>
                     </Typography>
@@ -115,7 +115,7 @@ export default function ComparisonTable(props) {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      <span>
+                      <span style={{ whiteSpace: 'pre-line' }}>
                         {props.malaysia.subInfo}
                       </span>
                     </Typography>
@@ -147,7 +147,7 @@ export default function ComparisonTable(props) {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      <span>
+                      <span style={{ whiteSpace: 'pre-line' }}>
                         {props.philippines.subInfo}
                       </span>
                     </Typography>
