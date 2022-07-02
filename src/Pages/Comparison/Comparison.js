@@ -34,6 +34,7 @@ export default function Compare() {
   }
 
   //to split lawDataToUse into 2 lawDataObj under the category Consent or Purpose
+  
 
   const lawDataObjectConsent = lawDataToUse.map((data) => ( data.category == 'consent'?
     <ComparisonTable
@@ -61,6 +62,45 @@ export default function Compare() {
     />:null
   ))
 
+  const lawDataObjectAccess = lawDataToUse.map((data) => (data.category == 'access' ?
+    <ComparisonTable
+      key={data.id}
+      id={data.id}
+      code={data.code}
+      question={data.question}
+      summary={data.summary}
+      singapore={singaporeSelected ? data.singapore : ""}
+      malaysia={malaysiaSelected ? data.malaysia : ""}
+      philippines={philippinesSelected ? data.philippines : ""}
+    /> : null
+  ))
+
+  const lawDataObjectCorrection = lawDataToUse.map((data) => (data.category == 'correction' ?
+    <ComparisonTable
+      key={data.id}
+      id={data.id}
+      code={data.code}
+      question={data.question}
+      summary={data.summary}
+      singapore={singaporeSelected ? data.singapore : ""}
+      malaysia={malaysiaSelected ? data.malaysia : ""}
+      philippines={philippinesSelected ? data.philippines : ""}
+    /> : null
+  ))
+
+  const lawDataObjectRetention = lawDataToUse.map((data) => (data.category == 'retention' ?
+    <ComparisonTable
+      key={data.id}
+      id={data.id}
+      code={data.code}
+      question={data.question}
+      summary={data.summary}
+      singapore={singaporeSelected ? data.singapore : ""}
+      malaysia={malaysiaSelected ? data.malaysia : ""}
+      philippines={philippinesSelected ? data.philippines : ""}
+    /> : null
+  ))
+
 
   return (
     <Container className={classes.container}>
@@ -76,7 +116,6 @@ export default function Compare() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-            // sx={{backgroundColor: "RGBA(0, 0, 0, 0)"}} //y u no work?
           >
           <Typography>Consent</Typography>
           </AccordionSummary>
@@ -89,12 +128,47 @@ export default function Compare() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-          // sx={{backgroundColor: "RGBA(0, 0, 0, 0)"}} //y u no work?
           >
             <Typography>Purpose</Typography>
           </AccordionSummary>
           <AccordionDetails>
             {lawDataObjectPurpose}
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Access</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            {lawDataObjectAccess}
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Correction</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            {lawDataObjectCorrection}
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Retention</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            {lawDataObjectRetention}
           </AccordionDetails>
         </Accordion>
         {hasSearch && searchValue.length === 0 && (
