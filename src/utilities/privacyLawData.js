@@ -10,11 +10,7 @@ export const privacyLawData = [
       country: "Singapore",
       info: "Yes",
       subInfo: "14.—(1)  An individual has not given consent under this Act for the collection, use or disclosure of personal data about the individual by an organisation for a purpose unless —\n(a)	the individual has been notified of the purpose of such collection, use or disclosure; and\n(b)	the individual provided his or her consent for that purpose in accordance with this Act.",
-<<<<<<< HEAD
       source: "Personal Data Protection Act 2012 \n Version as of: 02 Jul 2022",
-=======
-      source: "act 1 chapter 25",
->>>>>>> 5556c4d91d67c8f36414062ae02cd324a269d3da
     },
     malaysia: {
       country: "Malaysia",
