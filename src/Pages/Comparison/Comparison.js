@@ -175,7 +175,6 @@ export default function Compare() {
           <div className={classes["no-results"]}>Sorry, no results found..</div>
         )}
       </div>
-
       <div className={classes.footer}>
         <span className="font">
           Need futher help? Get in contact with
@@ -184,7 +183,11 @@ export default function Compare() {
             onClick={clickHandler}
             label="Lawyer"
             color="success"
-          />
+            />
+            
+            <div>
+              The chatbot provides preliminary recommendations based on considerations from the needs of various users and the relevant laws that apply to their needs. It does not constitute legal advice.
+            </div>
         </span>
       </div>
     </Container>
